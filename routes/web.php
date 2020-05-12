@@ -15,7 +15,7 @@ Route::get('/', 'PagesController@root')->name('root');
 
 Auth::routes(['verify' => true]);
 
-Route::resource('users', 'UsersController', ['only' => ['show', 'edit', 'update']]);
-//Route::get('/users/{user}', 'UsersController@show')->name('users.show');
-//Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
-//Route::patch('/users/{user}', 'UsersController@update')->name('users.update');
+//Route::resource('users', 'UsersController', ['only' => ['show', 'edit', 'update']]);
+Route::get('/users/{user}', 'UsersController@show')->name('users.show');
+Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
+Route::patch('/users/{user}', 'UsersController@update')->name('users.update');
