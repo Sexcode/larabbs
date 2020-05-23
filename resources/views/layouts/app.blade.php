@@ -10,7 +10,8 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>@yield('title', '喵喵网') - 连接全世界的喵奴</title>
-  <meta name="description" content="@yield('description', '喵喵网社区')" />
+  <meta name="description" content="@yield('description', setting('seo_description', 'LaraBBS 爱好者社区。'))" />
+  <meta name="keyword" content="@yield('keyword', setting('seo_keyword', 'LaraBBS,社区,论坛,开发者论坛'))" />
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
   @yield('styles')
